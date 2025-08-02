@@ -1,8 +1,8 @@
 import React from 'react';
-import ManufacturingOrderList from './components/ManufacturingOrderList';
+import TaskFilterSidebar from './components/TaskFilterSidebar';
 
 const MyPageComponent = () => {
-  return <ManufacturingOrderList />;
+  return <TaskFilterSidebar />;
 };
 
 export default MyPageComponent;
