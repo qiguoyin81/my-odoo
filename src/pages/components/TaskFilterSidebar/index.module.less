@@ -1,0 +1,417 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 656px;
+  padding: 2px 2px 6px;
+  background-color: #fff;
+}
+
+.inputSearchContainer {
+  align-self: flex-end;
+  width: 542px;
+}
+
+.searchAddonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 120px;
+}
+
+.searchIcon {
+  width: 16px;
+  height: 16px;
+  color: #37415c;
+  font-size: 16px;
+}
+
+.addonContentContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.logoImage {
+  flex-shrink: 0;
+  width: 28px;
+  height: 24px;
+  border-radius: 2px;
+}
+
+.todoButton {
+  flex: 1;
+  height: 25px;
+  border-radius: 8px;
+  background-color: #e7e9ed;
+  color: #374156;
+  font-size: 12px;
+}
+
+.todoButtonText {
+  white-space: nowrap;
+  color: #374156;
+  font-size: 12px;
+}
+
+.todoStatusIcon {
+  display: block;
+  flex-shrink: 0;
+  width: 12px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.searchButtonIcon {
+  width: 6px;
+  height: 6px;
+  color: #111827;
+  font-size: 6px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
+  padding-top: 2px;
+  padding-right: 2px;
+  padding-left: 2px;
+  border: solid 1px #e1e2e4;
+  background-color: #fcfcfc;
+}
+
+.filterSection {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 16px 15px;
+  border-radius: 6px;
+  background-color: #fff;
+  gap: 10px;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.filterCategory {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterCategory:nth-child(1) {
+  align-self: flex-start;
+  margin-left: 6px;
+}
+
+.filterItem {
+  display: flex;
+  align-self: flex-start;
+}
+
+.filterItem:nth-child(1) {
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.filterIcon {
+  flex-shrink: 0;
+  width: 12px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.filterLabel {
+  margin-left: 8px;
+  white-space: nowrap;
+  color: #111827;
+  font-size: 14px;
+}
+
+.statusIcon {
+  flex-shrink: 0;
+  width: 10px;
+  height: 6px;
+  border-radius: 2px;
+}
+
+.statusLabel {
+  margin-left: 5px;
+  white-space: nowrap;
+  color: #374179;
+  font-size: 14px;
+}
+
+.filterItem:nth-child(2) {
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.statusText {
+  white-space: nowrap;
+  color: #37416d;
+  font-size: 12px;
+}
+
+.statusTextCompleted {
+  margin-top: 8px;
+  white-space: nowrap;
+  color: #374189;
+  font-size: 14px;
+}
+
+.filterItem:nth-child(3) {
+  flex-direction: column;
+  margin-top: 6px;
+  margin-left: 16px;
+}
+
+.statusTextCancelled {
+  white-space: nowrap;
+  color: #37415c;
+  font-size: 14px;
+}
+
+.filterItem:nth-child(4) {
+  flex-direction: column;
+  margin-top: 5px;
+  margin-left: 16px;
+}
+
+.divider {
+  height: 3px;
+  margin-top: 8px;
+  background-color: #d8dadd;
+}
+
+.categoryTitle {
+  margin-left: 20px;
+  color: #37415c;
+  font-size: 14px;
+}
+
+.categoryItem {
+  margin-top: 10px;
+  margin-left: 20px;
+  color: #374156;
+  font-size: 14px;
+}
+
+.categoryItemStarred {
+  margin-top: 10px;
+  margin-left: 20px;
+  color: #374179;
+  font-size: 14px;
+}
+
+.statusGroupConfirmed {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-top: 6px;
+  margin-left: 22px;
+}
+
+.statusTextConfirmed {
+  white-space: nowrap;
+  color: #374189;
+  font-size: 14px;
+}
+
+.statusTextConfirmed:nth-child(2) {
+  margin-top: 5px;
+}
+
+.statusGroupInProgress {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.statusTextInProgress {
+  white-space: nowrap;
+  color: #37416d;
+  font-size: 14px;
+}
+
+.statusTextInProgress:nth-child(2) {
+  margin-top: 4px;
+}
+
+.filterCategory:nth-child(2) {
+  margin-top: 10px;
+}
+
+.sectionDivider {
+  height: 2px;
+  background-color: #d8dadd;
+}
+
+.statusTextReady {
+  margin-top: 5px;
+  margin-left: 20px;
+  color: #37416d;
+  font-size: 14px;
+}
+
+.groupingSection {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 16px 266px;
+  border-radius: 18px;
+  background-color: #fff;
+  gap: 15px;
+}
+
+.groupingContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1px;
+}
+
+.groupingHeader {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+}
+
+.groupingHeader:nth-child(1) {
+  align-items: center;
+}
+
+.groupingIcon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.groupingOption {
+  color: #37416d;
+  font-size: 14px;
+}
+
+.groupingOption:nth-child(2) {
+  margin-top: 5px;
+  color: #37415c;
+  font-size: 14px;
+}
+
+.groupingOption:nth-child(3) {
+  margin-top: 5px;
+  white-space: nowrap;
+  color: #37416d;
+  font-size: 14px;
+}
+
+.groupingOption:nth-child(4) {
+  margin-top: 5px;
+  color: #374156;
+  font-size: 14px;
+}
+
+.groupingOption:nth-child(5) {
+  margin-top: 6px;
+  margin-left: 2px;
+  color: #374189;
+  font-size: 14px;
+}
+
+.groupingArrowIcon {
+  flex-shrink: 0;
+  align-self: flex-end;
+  width: 8px;
+  height: 5px;
+  margin-bottom: 10px;
+  margin-left: 96px;
+  border-radius: 5px;
+}
+
+.groupingHeader:nth-child(2) {
+  margin-top: 10px;
+  margin-left: 6px;
+}
+
+.customGroupContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-right: 8px;
+}
+
+.customGroupText {
+  white-space: nowrap;
+  color: #37416d;
+  font-size: 14px;
+}
+
+.customGroupIcon {
+  flex-shrink: 0;
+  width: 8px;
+  height: 5px;
+  margin-left: 70px;
+  border-radius: 5px;
+}
+
+.verticalDivider {
+  width: 2px;
+  height: 210px;
+  background-color: #d8dadd;
+}
+
+.favoriteContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-start;
+  margin-left: 16px;
+}
+
+.favoriteIcon {
+  width: 14px;
+  height: 14px;
+  color: #f3cc00;
+  font-size: 14px;
+}
+
+.favoriteText {
+  margin-left: 10px;
+  white-space: nowrap;
+  color: #111827;
+  font-size: 14px;
+}
+
+.saveSearchSelect {
+  min-width: 168px;
+  margin-top: 8px;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2px;
+}
+
+.footerImage {
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
+.footerImage:nth-child(1) {
+  align-self: flex-end;
+  width: 10px;
+  height: 6px;
+}
+
+.footerImage:nth-child(2) {
+  width: 8px;
+  height: 8px;
+}

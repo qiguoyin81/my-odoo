@@ -1,389 +1,441 @@
-.manufacturing-order-layout {
-  height: 100vh;
+.advanced-search-container {
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
 
-  .header {
-    background: #fff;
-    padding: 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    position: relative;
-    z-index: 10;
+  .search-component {
+    width: 100%;
+    max-width: 900px;
 
-    .header-content {
+    .search-input-wrapper {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 0 24px;
+      background: white;
+      border-radius: 8px;
+      padding: 8px 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      position: relative;
+      border: 1px solid #e8e8e8;
+      transition: all 0.3s;
+      min-height: 40px;
 
-      .logo {
-        font-size: 20px;
-        font-weight: bold;
+      &:hover {
+        border-color: #40a9ff;
+        box-shadow: 0 4px 16px rgba(24, 144, 255, 0.15);
+      }
+
+      .search-icon {
         color: #1890ff;
-        margin-right: 24px;
+        margin-right: 10px;
+        font-size: 16px;
+        flex-shrink: 0;
       }
 
-      .module-title {
-        font-size: 18px;
-        font-weight: 500;
-        color: rgba(0, 0, 0, 0.85);
-        margin-right: 24px;
-        padding: 0 16px;
-        border-right: 1px solid #f0f0f0;
-      }
-
-      .navigation-menu {
+      .search-tags {
         flex: 1;
-        border: none;
-
-        .ant-menu-item,
-        .ant-menu-submenu-title {
-          padding: 0 16px;
-        }
-
-        .ant-menu-submenu-arrow {
-          margin-left: 8px;
-        }
-      }
-
-      .user-info {
         display: flex;
+        flex-wrap: nowrap;
+        gap: 6px;
+        min-height: 24px;
         align-items: center;
-        gap: 20px;
+        cursor: pointer;
+        overflow-x: auto;
+        padding: 2px 0;
+        scrollbar-width: none;
 
-        .icon-button {
-          font-size: 16px;
-          color: rgba(0, 0, 0, 0.65);
-          cursor: pointer;
+        &::-webkit-scrollbar {
+          display: none;
+        }
 
-          &:hover {
-            color: #1890ff;
+        .filter-tag,
+        .grouping-tag {
+          margin: 0;
+          font-size: 12px;
+          padding: 0 8px;
+          height: 24px;
+          line-height: 22px;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          flex-shrink: 0;
+          max-width: 150px;
+
+          .ant-space {
+            display: flex;
+            align-items: center;
+          }
+
+          .anticon {
+            font-size: 12px;
+          }
+
+          .ant-tag-close-icon {
+            font-size: 10px;
+            margin-left: 4px;
           }
         }
 
-        .company-name {
-          margin-left: 8px;
-          color: rgba(0, 0, 0, 0.85);
+        .placeholder-text {
+          color: #bfbfbf;
+          font-size: 14px;
+          white-space: nowrap;
+        }
+      }
+
+      .dropdown-button {
+        border: none;
+        box-shadow: none;
+        background: #f0f7ff;
+        padding: 4px 8px;
+        margin-left: 8px;
+        height: 28px;
+        border-radius: 4px;
+        transition: all 0.3s;
+        flex-shrink: 0;
+
+        &:hover {
+          background: #1890ff;
+          color: white;
+        }
+
+        .anticon {
+          font-size: 12px;
+        }
+      }
+
+      .filter-count-badge {
+        margin-left: 8px;
+        flex-shrink: 0;
+
+        .ant-badge-count {
+          font-size: 10px;
+          min-width: 18px;
+          height: 18px;
+          line-height: 18px;
+          padding: 0 6px;
+          border-radius: 9px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
       }
     }
   }
+}
 
-  .content {
-    padding: 24px;
-    background: #f0f2f5;
+.search-dropdown-content {
+  width: 900px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  padding: 16px;
+  border: 1px solid #f0f0f0;
 
-    .breadcrumb-text {
-      font-size: 16px;
-      font-weight: 500;
-      color: rgba(0, 0, 0, 0.85);
-      padding: 0 16px;
-    }
+  .horizontal-controls {
+    display: flex;
+    gap: 16px;
 
-    .toolbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-      background: #fff;
-      padding: 16px 24px;
-      border-radius: 6px;
+    .control-card {
+      flex: 1;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border: 1px solid #f0f0f0;
+      border-radius: 8px;
+      transition: all 0.3s;
 
-      .toolbar-left {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-color: #d9d9d9;
       }
 
-      .toolbar-center {
-        display: flex;
-        align-items: center;
-        gap: 12px;
+      .ant-card-head {
+        min-height: 40px;
+        padding: 0 12px;
+        border-bottom: 1px solid #f0f0f0;
+        border-radius: 8px 8px 0 0;
+        background: #fafafa;
 
-        .search-filter-button {
-          display: flex;
-          align-items: center;
-          gap: 4px;
-        }
+        .ant-card-head-title {
+          padding: 8px 0;
+          font-size: 14px;
+          font-weight: 600;
+          color: #1f1f1f;
 
-        .search-input {
-          width: 300px;
-        }
-      }
-
-      .toolbar-right {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-
-        .view-switcher {
-          display: flex;
-          border: 1px solid #d9d9d9;
-          border-radius: 4px;
-          overflow: hidden;
-
-          .view-button {
-            border: none;
-            border-radius: 0;
-            padding: 4px 8px;
-            font-size: 12px;
-
-            &:not(:last-child) {
-              border-right: 1px solid #d9d9d9;
-            }
-
-            &.ant-btn-primary {
-              background: #1890ff;
-              color: #fff;
-            }
+          .ant-space {
+            display: flex;
+            align-items: center;
 
             .anticon {
-              font-size: 12px;
+              color: #1890ff;
             }
           }
         }
+      }
 
-        .pagination-info {
-          color: rgba(0, 0, 0, 0.45);
-          font-size: 14px;
-        }
-
-        .pagination {
-          .ant-pagination-item,
-          .ant-pagination-prev,
-          .ant-pagination-next {
-            margin: 0 4px;
-          }
-        }
+      .ant-card-body {
+        padding: 12px;
       }
     }
 
-    .table-container {
-      .ant-table {
-        background: #fff;
-        border-radius: 6px;
-        overflow: hidden;
+    .filter-card {
+      flex: 2;
 
-        .ant-table-thead > tr > th {
-          background: #fafafa;
-          font-weight: 500;
-          position: relative;
-        }
-
-        .ant-table-tbody > tr > td {
-          border-bottom: 1px solid #f0f0f0;
-        }
-
-        .ant-table-tbody > tr:hover > td {
-          background: #f5f5f5;
-        }
-
-        .ant-table-selection-column {
-          padding: 0;
-          text-align: center;
-        }
-
-        .action-button {
-          color: rgba(0, 0, 0, 0.45);
-
-          &:hover {
-            color: #1890ff;
-            background: transparent;
-          }
-        }
-      }
-    }
-
-    .kanban-container {
-      .kanban-column {
-        .ant-card-head {
-          padding: 0 16px;
-          border-bottom: 1px solid #f0f0f0;
-
-          .ant-card-head-title {
-            padding: 12px 0;
-          }
-        }
-
-        .status-indicator {
-          width: 12px;
-          height: 12px;
-          border-radius: 50%;
-          display: inline-block;
-
-          &.草稿 {
-            background-color: #faad14;
-          }
-
-          &.待关闭 {
-            background-color: #1890ff;
-          }
-
-          &.进行中 {
-            background-color: #52c41a;
-          }
-
-          &.已完成 {
-            background-color: #d9d9d9;
-          }
-        }
-
-        .item-count {
-          color: rgba(0, 0, 0, 0.45);
-          font-size: 12px;
-        }
-
-        .kanban-items {
-          min-height: 400px;
-        }
-
-        .kanban-item {
+      .filter-section {
+        .filter-group {
           margin-bottom: 12px;
-          cursor: pointer;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .group-title {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #595959;
+            display: flex;
+            align-items: center;
+
+            &::before {
+              content: '';
+              display: inline-block;
+              width: 4px;
+              height: 14px;
+              background: #1890ff;
+              border-radius: 2px;
+              margin-right: 8px;
+            }
+          }
+
+          .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .filter-checkbox {
+              margin-inline-start: 0;
+              width: calc(50% - 5px);
+              font-size: 13px;
+              padding: 4px 8px;
+              border-radius: 4px;
+              transition: all 0.2s;
+
+              &:hover {
+                background: #f5f7fa;
+              }
+
+              .ant-checkbox {
+                top: 0;
+              }
+
+              .ant-space {
+                align-items: center;
+
+                .anticon {
+                  font-size: 14px;
+                  color: #1890ff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .grouping-card {
+      .grouping-section {
+        .grouping-options {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+
+          .grouping-radio {
+            margin-inline-start: 0;
+            align-items: center;
+            white-space: normal;
+            line-height: 1.5;
+            font-size: 13px;
+            padding: 6px 10px;
+            border-radius: 4px;
+            transition: all 0.2s;
+
+            &:hover {
+              background: #f5f7fa;
+            }
+
+            .ant-radio {
+              top: 0;
+            }
+
+            .ant-space {
+              align-items: center;
+
+              .anticon {
+                font-size: 14px;
+                color: #1890ff;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .favorites-card {
+      .favorites-section {
+        .favorites-button {
+          width: 100%;
+          text-align: left;
+          height: auto;
+          padding: 6px 10px;
+          font-size: 13px;
+          border-radius: 4px;
+          background: #f0f7ff;
+          border-color: #d9e8ff;
+          color: #1890ff;
           transition: all 0.3s;
 
           &:hover {
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            background: #1890ff;
+            color: white;
+            border-color: #1890ff;
           }
 
-          .kanban-item-header {
+          .ant-space {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin-bottom: 8px;
           }
-
-          .kanban-item-content {
-            .product-info {
-              margin-bottom: 8px;
-            }
-
-            .item-details {
-              margin-bottom: 8px;
-              font-size: 12px;
-
-              span {
-                display: block;
-              }
-            }
-
-            .item-footer {
-              .item-time {
-                font-size: 12px;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .calendar-container {
-      background: #fff;
-      border-radius: 6px;
-      padding: 24px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-
-      .custom-calendar {
-        .ant-picker-calendar-date {
-          height: auto;
-          min-height: 100px;
-        }
-
-        .events {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-
-          .event-item {
-            margin: 2px 0;
-            font-size: 12px;
-
-            &.待关闭 {
-              .ant-badge-status-dot {
-                background-color: #1890ff;
-              }
-            }
-
-            &.草稿 {
-              .ant-badge-status-dot {
-                background-color: #faad14;
-              }
-            }
-          }
-        }
-
-        .notes-month {
-          text-align: center;
-          font-size: 24px;
-          line-height: 1;
-        }
-
-        .ant-picker-calendar-date-value {
-          font-size: 14px;
         }
       }
     }
   }
 }
 
-.column-selector {
-  padding: 8px 0;
+.favorites-dropdown {
+  width: 260px;
+  padding: 12px;
+  background: white;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
 
-  .column-selector-title {
-    padding: 8px 16px;
-    font-weight: 500;
-    border-bottom: 1px solid #f0f0f0;
-  }
-
-  .column-selector-content {
-    max-height: 300px;
-    overflow-y: auto;
-
-    .column-item {
-      padding: 6px 16px;
-
-      .ant-checkbox-wrapper {
-        width: 100%;
-      }
-    }
-  }
-}
-
-.notification-dropdown {
-  width: 320px;
-
-  .notification-header {
+  .favorites-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 12px 16px;
+    padding: 6px 0;
+    margin-bottom: 8px;
     border-bottom: 1px solid #f0f0f0;
+
+    .favorites-icon {
+      color: #1890ff;
+      font-size: 16px;
+      margin-right: 8px;
+    }
+
+    .favorites-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1f1f1f;
+    }
   }
 
-  .notification-list {
-    max-height: 300px;
+  .favorites-list {
+    max-height: 220px;
     overflow-y: auto;
+    margin-bottom: 12px;
 
-    .notification-item {
-      padding: 12px 16px;
-      border-bottom: 1px solid #f0f0f0;
+    .favorite-item {
+      padding: 8px 10px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      transition: all 0.2s;
 
-      &:last-child {
-        border-bottom: none;
+      &:hover {
+        background-color: #f0f7ff;
+        color: #1890ff;
       }
 
-      &.unread {
-        background-color: #f0f8ff;
-      }
-
-      .notification-time {
-        font-size: 12px;
+      .favorite-item-icon {
+        font-size: 14px;
+        margin-right: 8px;
+        color: #1890ff;
       }
     }
   }
 
-  .notification-footer {
-    padding: 8px 16px;
-    border-top: 1px solid #f0f0f0;
-    text-align: center;
+  .save-search {
+    padding: 6px 0;
+
+    .ant-input {
+      font-size: 13px;
+      padding: 4px 11px;
+      height: 32px;
+      border-radius: 4px;
+
+      .ant-input-prefix {
+        color: #bfbfbf;
+        margin-right: 6px;
+      }
+    }
+
+    .ant-btn {
+      font-size: 13px;
+      height: 32px;
+      padding: 0 12px;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .search-dropdown-content {
+    width: 95vw;
+  }
+
+  .horizontal-controls {
+    flex-direction: column;
+  }
+
+  .control-card {
+    width: 100% !important;
+  }
+
+  .filter-options {
+    .filter-checkbox {
+      width: 100% !important;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .advanced-search-container {
+    padding: 15px;
+    padding-top: 80px;
+  }
+
+  .search-input-wrapper {
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+
+  .search-dropdown-content {
+    padding: 12px;
+  }
+
+  .horizontal-controls {
+    gap: 12px;
+  }
+
+  .control-card {
+    .ant-card-head {
+      padding: 0 10px;
+    }
+
+    .ant-card-body {
+      padding: 10px;
+    }
   }
 }
